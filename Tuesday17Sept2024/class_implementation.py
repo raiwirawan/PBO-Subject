@@ -63,13 +63,15 @@ if __name__ == "__main__":
     
     reptile = Reptile('Snake', 12, 'Yellow Black')
 
+    reptile.eat()
+    reptile.sleep()
     reptile.live_long()
     reptile.pattern()
 
-    reptile.eat()
-    reptile.sleep()
 
     human = Human('Rai Wirawan', 19, 'Brow', 2, 10, 30)
 
+    human.eat()
+    human.sleep()
     human.walk()
     human.run()
