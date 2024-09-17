@@ -1,4 +1,5 @@
 # Class Animal (Superclass)
+#made by gulem 
 class Animal:
     def __init__(self, name, umur):
         self.name = name
@@ -57,9 +58,9 @@ if __name__ == "__main__":
 
     mammal.eat()
     mammal.sleep()
-
     mammal.nurse()
     mammal.groom()
+    mammal.live_long()
     
     reptile = Reptile('Snake', 12, 'Yellow Black')
 
@@ -73,5 +74,6 @@ if __name__ == "__main__":
 
     human.eat()
     human.sleep()
+    human.live_long()
     human.walk()
     human.run()
