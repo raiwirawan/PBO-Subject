@@ -28,6 +28,8 @@ for kendaraan in tuple_of_instance:
     print(f"Nama Instance: {kendaraan.nama_instance}, Brand: {kendaraan.brand}, Model: {kendaraan.model}")
     kendaraan.bergerak()
 
+print("\n======================================================\n")
+
 # Menggunakan list
 list_of_instance = [mobil, kapal, pesawat]
 for kendaraan in list_of_instance:
