@@ -1,5 +1,3 @@
-# Dikarenakan keterbatasan waktu, kami hanya dapat membuat sedikit saja pak
-
 class User:
     def __init__(self, user_id, username, email, password, is_youtube_premium = False, is_logged_in = False):
         self.__user_id = user_id
@@ -48,7 +46,6 @@ class User:
     def delete_video():
         pass
 
-# user = User('adnAkHsFudSfs21', 'ramadenpasar1', 'ramadenpasar01@gmail.com', 'ramalawak123', False)
 
 class Admin(User):
     def __init__(self, user_id, username, email, password, is_youtube_premium=False, is_logged_in=False):
@@ -57,9 +54,6 @@ class Admin(User):
     def delete_video(self, video_id):
         return f'YouTube Admin has deleted {self.get_username()} user {video_id} video!'
 
-# admin = Admin('adnAkHsFudSfs21', 'ramadenpasar1', 'ramadenpasar01@gmail.com', 'ramalawak123', False)
-# print(admin.delete_video('lawakan hari ini'))
-
 class RegularUser(User):
     def __init__(self, user_id, username, email, password, is_youtube_premium=False, is_logged_in=False):
         super().__init__(user_id, username, email, password, is_youtube_premium, is_logged_in)
@@ -67,8 +61,7 @@ class RegularUser(User):
     def subscribe(self, channel_id):
         return f'{self.get_username()} subscribed {channel_id} channel!'
 
-# regular_user = RegularUser('adnAkHsFudSfs21', 'ramadenpasar1', 'ramadenpasar01@gmail.com', 'ramalawak123', False)
-# print(regular_user.subscribe('ramangelawak_official'))
+
 
 class Video:
     def __init__(self, video_id, video_title, video_description, channel_id, user_id):
@@ -108,5 +101,13 @@ class Playlist:
     def delete_video_from_playlist(self, video_id):
         self.__video_list[:-1]
         return self.__video_list
+    
+class Comment:
+    def __init__(self, user_id, comment_id, video_id, comment_content):
+        self.__user_id = user_id
+        self.__comment_id = comment_id
+        self.__video_id = video_id
+        self.__comment_content = comment_content
+
 
 playlist = Playlist()
